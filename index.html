@@ -63,16 +63,19 @@ slider.oninput = function() {
 
 botaol.onclick = function() {
   newwindow = window.open("http://tccjosemiranda.ddns.net/status=ON")
+  setTimeout(() => {  newwindow.close(); }, 4000);
 }
   
   
 botaod.onclick = function() {
   newwindow = window.open("http://tccjosemiranda.ddns.net/status=OFF")
+  setTimeout(() => {  newwindow.close(); }, 4000);
 }
   
   
 botaov.onclick = function() {
   newwindow = window.open(urlstring)
+  setTimeout(() => {  newwindow.close(); }, 4000);
 }
   
         
