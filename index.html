@@ -33,18 +33,27 @@
     <button onClick="window.open('http://tccjosemiranda.ddns.net/status=OFF')" style="padding: 16px; background-color: darkblue; color:aliceblue; border-radius: 4px;font-size: 12px">Desligar</button>
 
 <div class="slidecontainer">
-  <input type="range" min="10" max="100" value="100" class="slider" id="myRange">
-  <p>Value: <span id="demo"></span>%</p>
+  <input type="range" min="0" max="100" value="100" class="slider" id="velocidade">
+  <p>Potência: <span id="indicador_potencia"></span>%</p>
 </div>
-    ​<script>
-var slider = document.getElementById("myRange");
-var output = document.getElementById("demo");
+    
+<script>
+var slider = document.getElementById("velocidade");
+var output = document.getElementById("indicador_potencia");
+var speed = document.getElementById("speed");    
 output.innerHTML = slider.value;
 
 slider.oninput = function() {
   output.innerHTML = this.value;
+  
+  speed.innerHTML = this.value*88.5 + 150;
+  
 }
+        
 </script>
+    
+<button onClick="window.open('http://tccjosemiranda.ddns.net/speed=<span id="speed"></span>%</p>')" style="padding: 16px; background-color: darkblue; color:aliceblue; border-radius: 4px;font-size: 12px">Desligar</button>
+    
 
   </body>
 </html>
