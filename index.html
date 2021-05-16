@@ -37,10 +37,15 @@
   <p>Potência: <span id="indicador_potencia"></span>%</p>
 </div>
     
+<button id="enviavelocidade" style="padding: 16px; background-color: darkblue; color:aliceblue; border-radius: 4px;font-size: 12px">Enviar</button>    
+    
+    
+    
 <script>
 var slider = document.getElementById("velocidade");
 var output = document.getElementById("indicador_potencia");
-var urlstring =  document.getElementById("urlstring"); 
+var urlstring="";
+var botaov = document.getElementById("enviavelocidade");  
 output.innerHTML = slider.value;
 
 slider.oninput = function() {
@@ -51,10 +56,15 @@ slider.oninput = function() {
   urlstring = "http://tccjosemiranda.ddns.net/speed=" + speed;
   
 }
+  
+botaov.onclick = function() {
+  window.open(urlstring)
+}
+  
         
 </script>
     
-<button onClick="window.open(<span id='urlstring'></span>)" style="padding: 16px; background-color: darkblue; color:aliceblue; border-radius: 4px;font-size: 12px">Enviar</button>
+
     
 
   </body>
