@@ -27,25 +27,12 @@
   <body>
 
     <h1>Controle remoto de Ventilador - TCC Jose Miranda Netto</h1>
-    <form method="get" action="http://tccjosemiranda.ddns.net/status=ON">
-  <!--    <div>
-        <label for="say">What greeting do you want to say?</label>
-        <input name="say" id="say" value="Hi">
-      </div>
-      <div>
-        <label for="to">Who do you want to say it to?</label>
-        <input name="to" value="Mom">
-      </div> -->
-      <div>
-        <button>Ligar</button>
-      </div>
-    </form>
 
-    <form method="get" action="http://tccjosemiranda.ddns.net/status=OFF">
-      <div>
-        <button>Desligar</button>
-      </div>
-    </form>
+    <button onClick="window.location.href = 'http://tccjosemiranda.ddns.net/status=ON'" style="padding: 16px; background-color: darkblue; color:aliceblue; border-radius: 4px;font-size: 12px">Ligar</button>
+
+    <button onClick="window.location.href = 'http://tccjosemiranda.ddns.net/status=OFF'" style="padding: 16px; background-color: darkblue; color:aliceblue; border-radius: 4px;font-size: 12px">Desligar</button>
+
+
 
 
   </body>
