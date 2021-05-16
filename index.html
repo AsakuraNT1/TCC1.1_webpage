@@ -2,10 +2,10 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>PHP form submission example</title>
+    <title>Controle remoto de Ventilador - TCC Jose Miranda Netto</title>
     <style>
       form {
-        width: 420px;
+        width: 430px;
       }
 
       div {
@@ -25,18 +25,28 @@
     </style>
   </head>
   <body>
-    <form method="post" action="index.php">
-      <div>
+
+    <h1>Controle remoto de Ventilador - TCC Jose Miranda Netto</h1>
+    <form method="get" action="http://tccjosemiranda.ddns.net/status=ON">
+  <!--    <div>
         <label for="say">What greeting do you want to say?</label>
         <input name="say" id="say" value="Hi">
       </div>
       <div>
         <label for="to">Who do you want to say it to?</label>
         <input name="to" value="Mom">
-      </div>
+      </div> -->
       <div>
-        <button>Send my greetings</button>
+        <button>Ligar</button>
       </div>
     </form>
+
+    <form method="get" action="http://tccjosemiranda.ddns.net/status=OFF">
+      <div>
+        <button>Desligar</button>
+      </div>
+    </form>
+
+
   </body>
 </html>
