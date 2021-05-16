@@ -28,9 +28,9 @@
 
     <h1>Controle remoto de Ventilador - TCC Jose Miranda Netto</h1>
 
-    <button onClick="window.open('http://tccjosemiranda.ddns.net/status=ON')" style="padding: 16px; background-color: darkblue; color:aliceblue; border-radius: 4px;font-size: 12px">Ligar</button>
+    <button id="btnliga" style="padding: 16px; background-color: darkblue; color:aliceblue; border-radius: 4px;font-size: 12px">Ligar</button>
 
-    <button onClick="window.open('http://tccjosemiranda.ddns.net/status=OFF')" style="padding: 16px; background-color: darkblue; color:aliceblue; border-radius: 4px;font-size: 12px">Desligar</button>
+    <button id="btndesliga" style="padding: 16px; background-color: darkblue; color:aliceblue; border-radius: 4px;font-size: 12px">Desligar</button>
 
 <div class="slidecontainer">
   <input type="range" min="0" max="100" value="100" class="slider" id="velocidade">
@@ -46,6 +46,10 @@ var slider = document.getElementById("velocidade");
 var output = document.getElementById("indicador_potencia");
 var urlstring="";
 var botaov = document.getElementById("enviavelocidade");  
+var botaol = document.getElementById("btnliga");  
+var botaod = document.getElementById("btndesliga");  
+var newwindow;
+  
 output.innerHTML = slider.value;
 
 slider.oninput = function() {
@@ -56,9 +60,22 @@ slider.oninput = function() {
   urlstring = "http://tccjosemiranda.ddns.net/speed=" + speed;
   
 }
+
+botaol.onclick = function() {
+  newwindow.close();
+  newwindow = window.open("http://tccjosemiranda.ddns.net/status=ON")
+}
+  
+  
+botaod.onclick = function() {
+  newwindow.close();
+  newwindow = window.open("http://tccjosemiranda.ddns.net/status=OFF")
+}
+  
   
 botaov.onclick = function() {
-  window.open(urlstring)
+  newwindow.close();
+  newwindow = window.open(urlstring)
 }
   
         
