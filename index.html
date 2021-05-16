@@ -51,7 +51,7 @@ output.innerHTML = slider.value;
 slider.oninput = function() {
   output.innerHTML = this.value;
   
-  var speed = this.value*88.5 + 150;
+  var speed = Match.round(this.value*88.5 + 150);
   
   urlstring = "http://tccjosemiranda.ddns.net/speed=" + speed;
   
