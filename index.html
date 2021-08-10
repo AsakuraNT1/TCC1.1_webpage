@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>Controle remoto de Ventilador - TCC Jose Miranda Netto</title>
+    <title>Controle remoto de Ventilador - TCC Jose Miranda Netto #2</title>
     <style>
       form {
         width: 430px;
@@ -57,18 +57,18 @@ slider.oninput = function() {
   
   var speed = Math.round(this.value*88.5 + 150);
   
-  urlstring = "http://tccjosemiranda.ddns.net/speed=" + speed;
+  urlstring = "http://tccjosemiranda2.ddns.net/speed=" + speed;
   
 }
 
 botaol.onclick = function() {
-  newwindow = window.open("http://tccjosemiranda.ddns.net/status=ON")
+  newwindow = window.open("http://tccjosemiranda2.ddns.net/status=ON")
   setTimeout(() => {  newwindow.close(); }, 4000);
 }
   
   
 botaod.onclick = function() {
-  newwindow = window.open("http://tccjosemiranda.ddns.net/status=OFF")
+  newwindow = window.open("http://tccjosemiranda2.ddns.net/status=OFF")
   setTimeout(() => {  newwindow.close(); }, 4000);
 }
   
